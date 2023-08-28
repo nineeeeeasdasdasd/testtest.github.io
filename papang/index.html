@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Quiz App | CodingNepal</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <?!= include('style') ?>
+    <!-- FontAweome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- start Quiz button -->
+    <div class="start_btn"><button>เริ่มทำแบบทดสอบ</button></div>
+
+    <!-- หน้าคำชี้แจง -->
+    <div class="info_box">
+        <div class="info-title"><span>คำชี้แจงในการทำแบบทดสอบ</span></div>
+        <div class="info-list">
+            <div class="info">1. คุณมีเวลาทำแบบทดสอบ <span>15 วินาที</span> ต่อ 1 ข้อ.</div>
+            <div class="info">2. ถ้าเลือกตอบตัวเลือกใดแล้วไม่สามารถเปลี่ยนตอบตัวเลือกใหม่ได้.</div>
+            <div class="info">3. เมื่อสอบเสร็จแล้วจะไม่สามารถเลือกตอบใหม่ได้อีก.</div>
+            <div class="info">4. คุณต้องทำข้อสอบให้ครบทุกข้อ.</div>
+            <div class="info">5. เมื่อตอบถูกจะได้คะแนนข้อละ 1 คะแนน.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">ออก</button>
+            <button class="restart">เริ่มสอบ</button>
+        </div>
+    </div>
+
+    <!-- หน้าคำถาม -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">แบบทดสอบก่อนเรียน</div>
+            <div class="timer">
+                <div class="time_left_txt">เหลือเวลา</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- แทรกคำถามที่นี่ -->
+            </div>
+            <div class="option_list">
+                <!-- แทรกตัวเลือกที่นี่ -->
+            </div>
+        </section>
+
+        <!-- ส่วนล่างของหน้าคำถาม -->
+        <footer>
+            <div class="total_que">
+                <!-- แทรกข้อที่ และจำนวนคำถามทั้งหมด -->
+            </div>
+            <button class="next_btn">ข้อถัดไป</button>
+        </footer>
+    </div>
+
+    <!-- หน้ารายงานผลการสอบ -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">คุณทำข้อสอบครบทุกข้อแล้ว!</div>
+        <div class="score_text">
+            <!-- แทรกรายงานผลการสอบ+คะแนนที่นี่ -->
+        </div>
+        <div class="buttons">
+            <button class="restart">เริ่มสอบใหม่</button>
+            <button class="quit">จบการสอบ</button>
+        </div>
+    </div>
+    <div w3-include-html="script.html"></div>
+</body>
+</html>
