@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+      <div class="text-center">
+        <h2>แบบทดสอบความบุลลี่ในตัวคุณ</h2>
+        <p id="comment"></p>
+        <p id="question"></p>
+        <p id="options"></p>
+        <p id="button" class="btn"></p>
+      </div>
+    </div>
+  <script>
+ // ------------------------------------ คำถาม 1 ---------------------------
+    var q01 = ["คุณเคยใช้สื่อโซเชียลมีเดียในการว่าร้ายผู้อื่นในทางที่ไม่ดี"];
+        var ch01 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 2 ---------------------------        
+    var q02 = ["คุณเคยพูดเรื่องน่าอายของผู้อื่นในที่สาธาราณะเพื่อให้เกิดความอับอาย"];
+        var ch02 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 3 ---------------------------
+    var q03 = ["คุณเคยเหยียด เชื้อชาติ ศาสนา ของผู้อื่น"];
+        var ch03 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 4 ---------------------------
+    var q04 = ["คุณเคยดูถูกเหยียดหยามผู้อื่นเกี่ยวกับระดับการศึกษา หรือ สถาบันที่จบมา"];
+        var ch04 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 5 ---------------------------
+    var q05 = ["คุณเคยดูถูก อาชีพ หน้าที่การงาน ของผู้อื่น"];
+        var ch05 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 6 ---------------------------
+    var q06 = ["คุณเคยพูดเหน็บเเนมคนอื่น"];
+        var ch06 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 7 ---------------------------
+    var q07 = ["คุณเคยคิดว่าเรื่องที่น่าอายของคนอื่นเป็นเรื่องตลก"];
+        var ch07 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 8 ---------------------------
+    var q08 = ["คุณเคยพูดเรื่องไม่จริง หรือปล่อยข่าวลือทำให้ผู้อื่นเสียหาย"];
+        var ch08 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 9 ---------------------------
+    var q09 = ["คุณเคยล้อชื่อพ่อแม่ของคนอื่น"];
+        var ch09 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 10 ---------------------------
+    var q010 = ["คุณเคยใช้คำพูดที่ส่อไปในเรื่องทางเพศ หรือล้อความเป็นเพศที่สาม"];
+        var ch010 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 11 ---------------------------
+    var q011 = ["คุณเคยสั่งให้ผู้อื่นทำเรื่องที่ไม่อยากทำ หรือสั่งให้ไปกลั่นแกล้งคนอื่นต่อ"];
+        var ch011 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 12 ---------------------------
+    var q012 = ["คุณเคยใช้คำพูดล้อเลียนปมด้อยของผู้อื่น ไม่ว่าจะเป็นเรื่องหน้าตา หรือฐานะทางบ้าน"];
+        var ch012 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 13 ---------------------------
+    var q013 = ["คุณเคยเหยียดรสนิยมหรือความชอบของผู้อื่น เช่น การแต่งหน้า การแต่งตัว งานอดิเรก อาหารการกิน ฯลฯ"];
+        var ch013 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 14 ---------------------------
+    var q014 = ["คุณเคยกีดกันไม่ให้ใครเข้าใกล้ หรือแบนผู้อื่น"];
+        var ch014 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ คำถาม 15 ---------------------------
+    var q015 = ["คุณเคยกลั่นแกล้งผู้อื่นโดยการทำร้ายร่างกายหรือทำลายทรัพย์สินของผู้อื่น"];
+        var ch015 = [
+        `
+          <input onclick="correct()" type="radio" name="btn"  id="al"><label for="al">บ่อยครั้ง</label><br>
+          <input onclick="correct1()" type="radio" name="btn"  id="st"><label for="st">บางคร้้ง</label><br>
+          <input onclick="wrong()" type="radio" name="btn"  id="nv"><label for="nv">ไม่เคย</label><br>`
+          ];
+// ------------------------------------ กำหนดตัวแปร ---------------------------        
+        var score = 0;
+        function correct() {score +=2; }
+        function correct1() {score++}
+        function wrong() { }
+        function scoreTag(){summary}
+// ------------------------------------ เริ่มสอบ ---------------------------
+        window.onload = function() {
+            comment.innerHTML = "ในบางครั้งคุณอาจไม่รู้ตัวว่าคุณกำลังทำให้คนอื่นเจ็บปวดด้วยคำพูด และการกระทำของคุณ";
+            question.innerHTML = "แล้วคุณกระทำสิ่งนี้กับคนอื่นมากแค่ไหน? เขาจะเจ็บปวดมากเท่าไหร่ แล้วเขาจะเป็นอย่างไร?";
+            options.innerHTML = "ลองมาคำนวณความบุลลี่ในตัวคุณกันเถอะ;)";
+            button.innerHTML = `<button type="button" class="btn btn-danger" onclick=ques01()>เริ่มทดสอบ</button>`;
+        }
+// ------------------------------------ ข้อ 1 ---------------------------
+        function ques01() {
+        question.innerHTML = q01;
+        options.innerHTML = ch01;
+        comment.innerHTML = "ข้อที่ 1/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques02()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 2 ---------------------------
+        function ques02() {
+            question.innerHTML = q02;
+            options.innerHTML = ch02;
+            comment.innerHTML = "ข้อที่ 2/15";
+            button.innerHTML = `<button type="button" class="btn btn-danger" onclick=ques03()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 3 ---------------------------
+        function ques03() {
+            question.innerHTML = q03;
+            options.innerHTML = ch03;
+            comment.innerHTML = "ข้อที่ 3/15";
+            button.innerHTML = `<button type="button" class="btn btn-danger" onclick=ques04()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 4 ---------------------------
+        function ques04() {
+        question.innerHTML = q04;
+        options.innerHTML = ch04;
+        comment.innerHTML = "ข้อที่ 4/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques05()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 5 ---------------------------
+        function ques05() {
+        question.innerHTML = q05;
+        options.innerHTML = ch05;
+        comment.innerHTML = "ข้อที่ 5/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques06()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 6 ---------------------------
+        function ques06() {
+        question.innerHTML = q06 ;
+        options.innerHTML = ch06;
+        comment.innerHTML = "ข้อที่ 6/15";
+    button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques07()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 7 ---------------------------
+        function ques07() {
+        question.innerHTML = q07 ;
+        options.innerHTML = ch07;
+        comment.innerHTML = "ข้อที่ 7/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques08()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 8 ---------------------------
+        function ques08() {
+        question.innerHTML = q08 ;
+        options.innerHTML = ch08;
+        comment.innerHTML = "ข้อที่ 8/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques09()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 9 ---------------------------
+        function ques09() {
+        question.innerHTML = q09;
+        options.innerHTML = ch09;
+        comment.innerHTML = "ข้อที่ 9/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques010()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 10 ---------------------------
+        function ques010() {
+        question.innerHTML = q010 ;
+        options.innerHTML = ch010;
+        comment.innerHTML = "ข้อที่ 10/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques011()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 11 ---------------------------
+        function ques011() {
+        question.innerHTML = q011;
+        options.innerHTML = ch011;
+        comment.innerHTML = "ข้อที่ 11/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques012()>ข้อถัดไป</button>`;
+        }        
+// ------------------------------------ ข้อ 12 ---------------------------
+        function ques012() {
+        question.innerHTML = q012 ;
+        options.innerHTML = ch012;
+        comment.innerHTML = "ข้อที่ 12/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques013()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 13 ---------------------------
+        function ques013() {
+        question.innerHTML = q013 ;
+        options.innerHTML = ch013;
+        comment.innerHTML = "ข้อที่ 13/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques014()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 14 ---------------------------
+        function ques014() {
+        question.innerHTML = q014 ;
+        options.innerHTML = ch014;
+        comment.innerHTML = "ข้อที่ 14/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=ques015()>ข้อถัดไป</button>`;
+        }
+// ------------------------------------ ข้อ 15 ---------------------------
+        function ques015() {
+        question.innerHTML = q015 ;
+        options.innerHTML = ch015;
+        comment.innerHTML = "ข้อที่ 15/15";
+        button.innerHTML =  `<button type="button" class="btn btn-danger" onclick=summary()>ส่งคำตอบ</button>`;
+        }
+// ------------------------------------ สรุปคะแนน ---------------------------
+        function summary() {
+
+            question.innerHTML = "คะแนนเต็ม 30 คะแนน";
+            options.innerHTML = "คุณทำได้: " + score + ' คะแนน';
+            comment.innerHTML = "ความบุลลี่ในตัวคุณคือ" ;
+            button.innerHTML = `<button type="button" class="btn btn-danger" onclick=restart()>เริ่มใหม่</button>`;
+        }
+      
+
+// ------------------------------------ เริ่มใหม่ ---------------------------
+        function restart() {
+window.top.location="https://script.google.com/macros/s/AKfycbzrpHTMWVMly6Y9tNZH4gF8coVsSPs1Am_6mGkfJGFnh0P-4eK5EmxsWG_gVcWnC6Jf/exec"
+        }
+  </script>
+</body>
+
+</html>
